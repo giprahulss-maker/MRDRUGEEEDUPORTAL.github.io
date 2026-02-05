@@ -2,29 +2,147 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>B.Pharm Notes – Semester Wise | DrugEE</title>
+  <title>B.Pharm Notes (Semester Wise) | DrugEE</title>
+
   <meta name="description"
-        content="B.Pharm semester-wise notes, PDFs, and study material for all 8 semesters.">
+        content="B.Pharm semester-wise notes and study material for all 8 semesters.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f6f8fb;
+      color: #222;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #555;
+      margin-bottom: 40px;
+      font-size: 16px;
+    }
+
+    .semester-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .semester-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 22px;
+      text-align: center;
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .semester-card span {
+      display: block;
+      margin-top: 8px;
+      font-size: 14px;
+      color: #666;
+      font-weight: normal;
+    }
+
+    .semester-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .back-link {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .back-link a {
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: 600;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>B.Pharm Notes (Semester Wise)</h1>
-<p>Select your semester 👇</p>
+  <div class="container">
 
-<div class="semester-list">
-  <a href="bpharm-sem1.html">Semester 1</a><br>
-  <a href="bpharm-sem2.html">Semester 2</a><br>
-  <a href="bpharm-sem3.html">Semester 3</a><br>
-  <a href="bpharm-sem4.html">Semester 4</a><br>
-  <a href="bpharm-sem5.html">Semester 5</a><br>
-  <a href="bpharm-sem6.html">Semester 6</a><br>
-  <a href="bpharm-sem7.html">Semester 7</a><br>
-  <a href="bpharm-sem8.html">Semester 8</a>
-</div>
+    <h1>B.Pharm Notes</h1>
+    <p class="subtitle">Select your semester 👇</p>
 
-<br>
-<a href="index.html">⬅ Back to Home</a>
+    <div class="semester-grid">
+      <a href="bpharm-sem1.html" class="semester-card">
+        Semester 1
+        <span>Foundation Subjects</span>
+      </a>
+
+      <a href="bpharm-sem2.html" class="semester-card">
+        Semester 2
+        <span>Core Basics</span>
+      </a>
+
+      <a href="bpharm-sem3.html" class="semester-card">
+        Semester 3
+        <span>Pharmaceutics & Analysis</span>
+      </a>
+
+      <a href="bpharm-sem4.html" class="semester-card">
+        Semester 4
+        <span>Pharmacology Intro</span>
+      </a>
+
+      <a href="bpharm-sem5.html" class="semester-card">
+        Semester 5
+        <span>Clinical & Medicinal</span>
+      </a>
+
+      <a href="bpharm-sem6.html" class="semester-card">
+        Semester 6
+        <span>Industrial Pharmacy</span>
+      </a>
+
+      <a href="bpharm-sem7.html" class="semester-card">
+        Semester 7
+        <span>Advanced Topics</span>
+      </a>
+
+      <a href="bpharm-sem8.html" class="semester-card">
+        Semester 8
+        <span>Research & Practice</span>
+      </a>
+    </div>
+
+    <div class="back-link">
+      <a href="index.html">← Back to Home</a>
+    </div>
+
+  </div>
 
 </body>
 </html>
