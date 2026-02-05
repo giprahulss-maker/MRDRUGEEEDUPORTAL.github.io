@@ -53,6 +53,24 @@ footer {
   background: #0b3c5d;
   color: white;
 }
+/* LOGO STYLES */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+}
 
 /* CHAT */
 .chat-btn {
