@@ -1,156 +1,212 @@
+/* ================================
+   BASIC RESET
+================================ */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #f4f6f9;
-  color: #1e293b;
-}
-
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 32px;
-  background: white;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.logo {
-  font-weight: 700;
-  color: #0a2540;
-}
-
-.nav-links a {
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: 600;
-  color: #334155;
-}
-
-.nav-links a:hover {
-  color: #1fa67a;
-}
-
-/* HERO */
-.hero {
-  background: linear-gradient(135deg, #0a2540, #133b5c);
-  color: white;
-  padding: 80px 24px;
-}
-
-.hero-content {
-  max-width: 900px;
-  margin: auto;
-}
-
-.hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  max-width: 600px;
-  opacity: 0.95;
-}
-
-.hero-buttons {
-  margin: 30px 0;
-}
-
-.btn-primary {
-  background: #1fa67a;
-  color: white;
-  padding: 14px 26px;
-  border-radius: 14px;
-  text-decoration: none;
-  font-weight: 600;
-  margin-right: 12px;
-}
-
-.btn-secondary {
-  border: 2px solid white;
-  color: white;
-  padding: 14px 26px;
-  border-radius: 14px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.search-box {
-  margin-top: 30px;
-  width: 100%;
-  padding: 16px;
-  border-radius: 14px;
-  border: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+               "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
+  line-height: 1.7;
+  color: #1e1e1e;
+  background: #ffffff;
 }
 
-/* FEATURES */
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 60px 24px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.feature-card {
-  background: white;
-  padding: 28px;
-  border-radius: 18px;
-  text-align: center;
-  font-weight: 600;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-/* SECTIONS */
-.section {
-  padding: 80px 24px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.section h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-.light {
-  background: #eef2f7;
-}
-
-/* COURSES */
-.course-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.course-card {
-  background: white;
-  padding: 30px;
-  border-radius: 18px;
-  text-align: center;
+/* ================================
+   TYPOGRAPHY (WordPress-like)
+================================ */
+h1, h2, h3, h4 {
   font-weight: 700;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  margin-bottom: 0.8em;
 }
 
-.course-card span {
-  display: block;
-  margin-top: 8px;
-  font-weight: 400;
-  color: #64748b;
+h2 {
+  font-size: 1.9rem;
 }
 
-/* FOOTER */
-footer {
-  background: #0a2540;
-  color: white;
+p {
+  margin-bottom: 1.2em;
+}
+
+/* ================================
+   ALIGNMENTS
+================================ */
+.has-text-align-center {
   text-align: center;
-  padding: 20px;
+}
+
+.alignwide {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alignfull {
+  width: 100%;
+}
+
+/* ================================
+   BLOCK SPACING
+================================ */
+.wp-block-group,
+.wp-block-columns,
+.wp-block-buttons,
+.wp-block-query {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.wp-block-spacer {
+  width: 100%;
+}
+
+/* ================================
+   BUTTONS (SAME AS WP)
+================================ */
+.wp-block-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.wp-block-button {
+  width: 100%;
+}
+
+.wp-block-button__width-100 {
+  max-width: 360px;
+}
+
+.wp-block-button__link {
+  display: block;
+  text-align: center;
+  padding: 12px 20px;
+  background-color: #cd2653;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.wp-block-button__link:hover {
+  background-color: #a91f44;
+}
+
+/* ================================
+   TABLE OF CONTENTS
+================================ */
+.wp-block-table-of-contents ol {
+  max-width: 480px;
+  margin: 1.5rem auto;
+  padding-left: 1.2rem;
+}
+
+.wp-block-table-of-contents a {
+  text-decoration: none;
+  color: #cd2653;
+  font-weight: 500;
+}
+
+.wp-block-table-of-contents a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   MARK / HIGHLIGHT
+================================ */
+mark.has-accent-color {
+  color: #cd2653;
+  background: transparent;
+}
+
+/* ================================
+   EMBEDS (YOUTUBE)
+================================ */
+.wp-block-embed {
+  max-width: 800px;
+  margin: auto;
+}
+
+.wp-block-embed iframe {
+  width: 100%;
+  height: 450px;
+}
+
+/* ================================
+   COLUMNS
+================================ */
+.wp-block-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.wp-block-column {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* ================================
+   QUERY / POSTS GRID
+================================ */
+.wp-block-post-template {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.wp-block-post-featured-image img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.wp-block-post-title a {
+  color: #1e1e1e;
+  text-decoration: none;
+}
+
+.wp-block-post-title a:hover {
+  color: #cd2653;
+}
+
+/* ================================
+   SUBSCRIBE FORM
+================================ */
+form input[type="email"] {
+  width: 100%;
+  max-width: 360px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 10px 25px;
+  border: none;
+  background: #cd2653;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #a91f44;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.6rem;
+  }
 }
