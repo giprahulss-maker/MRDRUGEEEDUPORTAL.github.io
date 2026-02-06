@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>M.Pharm | Branches</title>
+
+  <style>
+    body{
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+    }
+
+    header{
+      background: #0b3c5d;
+      color: #fff;
+      padding: 30px 15px;
+      text-align: center;
+    }
+
+    header h1{
+      margin: 0;
+      font-size: 28px;
+    }
+
+    header p{
+      margin-top: 8px;
+      opacity: 0.9;
+      font-size: 15px;
+    }
+
+    .container{
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card{
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 26px 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      text-decoration: none;
+      color: #000;
+      text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 5px;
+      width: 100%;
+      background: linear-gradient(90deg, #0b3c5d, #328cc1);
+    }
+
+    .card:hover{
+      transform: translateY(-8px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+    }
+
+    .card h3{
+      margin: 18px 0 8px;
+      font-size: 18px;
+    }
+
+    .card span{
+      font-size: 14px;
+      color: #555;
+    }
+
+    footer{
+      text-align: center;
+      padding: 25px 10px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .back-home{
+      display: inline-block;
+      margin-top: 15px;
+      color: #fff;
+      font-size: 14px;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>M.Pharm</h1>
+  <p>Select your specialization</p>
+  <a href="../index.html" class="back-home">← Back to Notes</a>
+</header>
+
+<div class="container">
+
+  <div class="card-grid">
+
+    <a href="mph.html" class="card">
+      <h3>Pharmaceutics</h3>
+      <span>MPH</span>
+    </a>
+
+    <a href="mip.html" class="card">
+      <h3>Industrial Pharmacy</h3>
+      <span>MIP</span>
+    </a>
+
+    <a href="mpc.html" class="card">
+      <h3>Pharmaceutical Chemistry</h3>
+      <span>MPC</span>
+    </a>
+
+    <a href="mpa.html" class="card">
+      <h3>Pharmaceutical Analysis</h3>
+      <span>MPA</span>
+    </a>
+
+    <a href="mqa.html" class="card">
+      <h3>Quality Assurance</h3>
+      <span>MQA</span>
+    </a>
+
+    <a href="mra.html" class="card">
+      <h3>Regulatory Affairs</h3>
+      <span>MRA</span>
+    </a>
+
+    <a href="mpb.html" class="card">
+      <h3>Pharmaceutical Biotechnology</h3>
+      <span>MPB</span>
+    </a>
+
+    <a href="mpp.html" class="card">
+      <h3>Pharmacy Practice</h3>
+      <span>MPP</span>
+    </a>
