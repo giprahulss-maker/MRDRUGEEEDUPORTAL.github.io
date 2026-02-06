@@ -1,124 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Digital Pharmacy University</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- TOP BAR -->
-<header class="top-header">
-  <div class="container">
-    <h1>Digital Pharmacy University</h1>
-    <p>Free • Trusted • Pharmacy-Only Learning Platform</p>
-    <a href="#courses" class="btn-primary">Start Learning →</a>
-  </div>
-</header>
-
 <!-- NAVBAR -->
 <nav class="navbar">
-  <div class="container nav-flex">
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#courses">Courses</a>
-      <a href="#notes">Notes</a>
-      <a href="#practicals">Practicals</a>
-      <a href="#animations">Animations</a>
-      <a href="#exams">Exams</a>
-      <a href="#about">About</a>
-    </div>
+  <div class="logo">Digital Pharmacy University</div>
+  <div class="nav-links">
+    <a href="#courses">Courses</a>
+    <a href="#notes">Notes</a>
+    <a href="#practicals">Practicals</a>
+    <a href="#exams">Exams</a>
+    <a href="#about">About</a>
   </div>
 </nav>
 
-<!-- SEARCH -->
-<section class="search-section container">
-  <input type="text" id="searchBox" placeholder="Search drug, subject, semester, exam">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Free Pharmacy Education.<br>Built for Real Learning.</h1>
+    <p>
+      A trusted, pharmacy-only learning platform for  
+      D.Pharm, B.Pharm, M.Pharm & Pharm.D students.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#courses" class="btn-primary">Explore Courses</a>
+      <a href="#notes" class="btn-secondary">Browse Notes</a>
+    </div>
+
+    <input type="text" class="search-box"
+      placeholder="Search drug, subject, semester, exam">
+  </div>
 </section>
 
-<!-- MISSION -->
-<section id="home" class="section container">
-  <h2>Our Mission</h2>
-  <p class="lead">
-    Education without barriers. A single, reliable platform for
-    D.Pharm, B.Pharm, M.Pharm & Pharm.D students — designed for
-    clarity, exams, and real understanding.
-  </p>
-
-  <div class="feature-grid">
-    <div class="feature-card">📘 Structured Notes</div>
-    <div class="feature-card">🧪 Practical Manuals</div>
-    <div class="feature-card">🎥 Concept Animations</div>
-    <div class="feature-card">📝 Exam Preparation</div>
-  </div>
+<!-- FEATURES -->
+<section class="features">
+  <div class="feature-card">📘 Structured Notes</div>
+  <div class="feature-card">🧪 Practical Manuals</div>
+  <div class="feature-card">🎥 Visual Learning</div>
+  <div class="feature-card">📝 Exam Preparation</div>
 </section>
 
 <!-- COURSES -->
-<section id="courses" class="section container soft-bg">
+<section id="courses" class="section">
   <h2>Courses Offered</h2>
-
-  <div class="card">
-    <ul>
-      <li><strong>D.Pharm</strong> – Year 1 & Year 2</li>
-      <li><strong>B.Pharm</strong> – Semester 1 to 8</li>
-      <li><strong>M.Pharm</strong> – All Specializations</li>
-      <li><strong>Pharm.D</strong> – Academic + Internship</li>
-    </ul>
+  <div class="course-grid">
+    <div class="course-card">D.Pharm<br><span>Year 1 & 2</span></div>
+    <div class="course-card">B.Pharm<br><span>Semester 1–8</span></div>
+    <div class="course-card">M.Pharm<br><span>All Specializations</span></div>
+    <div class="course-card">Pharm.D<br><span>Academic + Internship</span></div>
   </div>
 </section>
 
-<!-- NOTES -->
-<section id="notes" class="section container">
-  <h2>Notes & Study Material</h2>
-  <p>
-    Unit-wise, PCI-aligned, exam-oriented pharmacy notes with tables,
-    flowcharts, mnemonics, and revision points.
-  </p>
-</section>
-
-<!-- PRACTICALS -->
-<section id="practicals" class="section container soft-bg">
-  <h2>Practicals & Lab Manuals</h2>
-  <p>
-    Step-by-step experiments, viva questions, diagrams, and examiner tips
-    for confident practical exams.
-  </p>
-</section>
-
-<!-- ANIMATIONS -->
-<section id="animations" class="section container">
-  <h2>Visual Learning</h2>
-  <p>
-    Drug mechanisms, physiology pathways, and pharmaceutical processes
-    explained visually for long-term retention.
-  </p>
-</section>
-
-<!-- EXAMS -->
-<section id="exams" class="section container soft-bg">
-  <h2>Exam Preparation</h2>
-  <p>
-    GPAT, NIPER, and University exam preparation with MCQs, PYQs,
-    weightage analysis, and smart revision tools.
-  </p>
-</section>
-
 <!-- ABOUT -->
-<section id="about" class="section container">
-  <h2>About This Platform</h2>
+<section id="about" class="section light">
+  <h2>Why This Platform?</h2>
   <p>
-    Built by educators for pharmacy students. Always free.
-    No ads. No paywalls. Ever.
+    Built by educators. Designed for students.  
+    No ads. No paywalls. Always free.
   </p>
 </section>
 
+<!-- FOOTER -->
 <footer>
   © Digital Pharmacy University • Education Without Barriers
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
