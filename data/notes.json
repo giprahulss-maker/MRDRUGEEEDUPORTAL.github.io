@@ -1,0 +1,15 @@
+{
+  "Pharmacology-II": {
+    "NSAIDs": {
+      "definition": "NSAIDs are drugs used to reduce pain, fever and inflammation.",
+      "mechanism": [
+        "Inhibit COX enzyme",
+        "Reduce prostaglandin synthesis"
+      ],
+      "exam": [
+        "COX-1 inhibition causes gastric ulcer",
+        "COX-2 selective drugs are safer for stomach"
+      ]
+    }
+  }
+}
