@@ -1,81 +1,102 @@
-/* RESET */
+/* ================================
+   ROOT COLORS (FROM SCREENSHOT)
+================================ */
+:root {
+  --bg-main: #f6efdf;        /* cream / beige background */
+  --text-main: #000000;      /* pure black text */
+  --accent: #c2185b;         /* pink/magenta links */
+  --accent-dark: #9c1349;    /* hover pink */
+  --white: #ffffff;
+}
+
+/* ================================
+   BASE RESET
+================================ */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-/* PAGE */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont,
-               "Segoe UI", Roboto, Arial, sans-serif;
-  background: #ffffff;   /* PURE WHITE (as screenshot) */
-  color: #000000;
-  line-height: 1.6;
-  padding: 24px;
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.7;
+  padding: 20px;
 }
 
-/* HEADINGS */
+/* ================================
+   HEADINGS (WORDPRESS STYLE)
+================================ */
 h1 {
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   text-align: center;
-  font-weight: 700;
-  margin: 40px 0 20px;
+  margin: 40px 0;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
 
 h2 {
   font-size: 1.9rem;
   text-align: center;
-  font-weight: 700;
-  margin: 60px 0 15px;
+  margin: 50px 0 20px;
+  font-weight: 600;
 }
 
-/* CENTER TEXT */
+/* ================================
+   PARAGRAPHS
+================================ */
+p {
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+}
+
 .has-text-align-center {
   text-align: center;
 }
 
-/* QUOTE */
-p strong {
-  font-size: 1.1rem;
-}
-
-/* TABLE OF CONTENTS (BLUE LINKS) */
+/* ================================
+   TABLE OF CONTENTS (PINK LINKS)
+================================ */
 .wp-block-table-of-contents ol {
-  max-width: 520px;
-  margin: 30px auto;
-  padding-left: 22px;
+  max-width: 600px;
+  margin: 25px auto;
+  padding-left: 20px;
 }
 
 .wp-block-table-of-contents li {
-  font-size: 1.15rem;
   margin-bottom: 10px;
+  font-size: 1.1rem;
 }
 
 .wp-block-table-of-contents a {
-  color: #0000ee;              /* DEFAULT WP BLUE */
+  color: var(--accent);
   text-decoration: underline;
+  font-weight: 500;
 }
 
-.wp-block-table-of-contents a:visited {
-  color: #551a8b;
+.wp-block-table-of-contents a:hover {
+  color: var(--accent-dark);
 }
 
-/* “Learn without limits” */
+/* ================================
+   MARK / HIGHLIGHT
+================================ */
 mark.has-accent-color {
-  color: #c2185b;
+  color: var(--accent);
   background: transparent;
-  font-style: italic;
-  font-weight: 600;
 }
 
-/* BUTTONS */
+/* ================================
+   BUTTONS (MATCH WORDPRESS LOOK)
+================================ */
 .wp-block-buttons {
   display: flex;
   flex-direction: column;
+  gap: 14px;
   align-items: center;
-  gap: 16px;
-  margin: 30px 0;
+  margin: 25px 0;
 }
 
 .wp-block-button {
@@ -85,43 +106,80 @@ mark.has-accent-color {
 
 .wp-block-button__link {
   display: block;
-  padding: 14px;
-  background: #c2185b;
-  color: #ffffff;
   text-align: center;
+  padding: 14px;
+  background: var(--accent);
+  color: var(--white);
   font-weight: 600;
-  border-radius: 8px;
   text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s ease;
 }
 
 .wp-block-button__link:hover {
-  background: #9c1349;
+  background: var(--accent-dark);
 }
 
-/* EMBED */
-.wp-block-embed iframe {
-  width: 100%;
+/* ================================
+   EMBEDS (YOUTUBE)
+================================ */
+.wp-block-embed {
   max-width: 720px;
-  height: 405px;
-  display: block;
   margin: 30px auto;
 }
 
-/* FORMS */
-input[type="email"] {
-  padding: 12px;
+.wp-block-embed iframe {
   width: 100%;
-  max-width: 360px;
-  border: 1px solid #bbb;
-  border-radius: 4px;
+  height: 405px;
+  border-radius: 6px;
 }
 
-button {
-  margin-top: 12px;
-  padding: 12px 26px;
-  background: #c2185b;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
+/* ================================
+   FORMS (SUBSCRIBE)
+================================ */
+form input[type="email"] {
+  width: 100%;
+  max-width: 360px;
+  padding: 12px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
   font-size: 1rem;
+}
+
+form button {
+  margin-top: 10px;
+  padding: 12px 26px;
+  border: none;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: var(--accent-dark);
+}
+
+/* ================================
+   LINKS (GLOBAL)
+================================ */
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+/* ================================
+   MOBILE OPTIMIZATION
+================================ */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
 }
