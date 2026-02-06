@@ -1,5 +1,16 @@
 /* ================================
-   BASIC RESET
+   ROOT COLORS (FROM SCREENSHOT)
+================================ */
+:root {
+  --bg-main: #f6efdf;        /* cream / beige background */
+  --text-main: #000000;      /* pure black text */
+  --accent: #c2185b;         /* pink/magenta links */
+  --accent-dark: #9c1349;    /* hover pink */
+  --white: #ffffff;
+}
+
+/* ================================
+   BASE RESET
 ================================ */
 * {
   box-sizing: border-box;
@@ -8,204 +19,166 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont,
-               "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-               "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
   line-height: 1.7;
-  color: #1e1e1e;
-  background: #ffffff;
+  padding: 20px;
 }
 
 /* ================================
-   TYPOGRAPHY (WordPress-like)
+   HEADINGS (WORDPRESS STYLE)
 ================================ */
-h1, h2, h3, h4 {
-  font-weight: 700;
-  margin-bottom: 0.8em;
+h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin: 40px 0;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
 
 h2 {
   font-size: 1.9rem;
-}
-
-p {
-  margin-bottom: 1.2em;
+  text-align: center;
+  margin: 50px 0 20px;
+  font-weight: 600;
 }
 
 /* ================================
-   ALIGNMENTS
+   PARAGRAPHS
 ================================ */
+p {
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+}
+
 .has-text-align-center {
   text-align: center;
 }
 
-.alignwide {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.alignfull {
-  width: 100%;
-}
-
 /* ================================
-   BLOCK SPACING
-================================ */
-.wp-block-group,
-.wp-block-columns,
-.wp-block-buttons,
-.wp-block-query {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-}
-
-.wp-block-spacer {
-  width: 100%;
-}
-
-/* ================================
-   BUTTONS (SAME AS WP)
-================================ */
-.wp-block-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-}
-
-.wp-block-button {
-  width: 100%;
-}
-
-.wp-block-button__width-100 {
-  max-width: 360px;
-}
-
-.wp-block-button__link {
-  display: block;
-  text-align: center;
-  padding: 12px 20px;
-  background-color: #cd2653;
-  color: #ffffff;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-}
-
-.wp-block-button__link:hover {
-  background-color: #a91f44;
-}
-
-/* ================================
-   TABLE OF CONTENTS
+   TABLE OF CONTENTS (PINK LINKS)
 ================================ */
 .wp-block-table-of-contents ol {
-  max-width: 480px;
-  margin: 1.5rem auto;
-  padding-left: 1.2rem;
+  max-width: 600px;
+  margin: 25px auto;
+  padding-left: 20px;
+}
+
+.wp-block-table-of-contents li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
 }
 
 .wp-block-table-of-contents a {
-  text-decoration: none;
-  color: #cd2653;
+  color: var(--accent);
+  text-decoration: underline;
   font-weight: 500;
 }
 
 .wp-block-table-of-contents a:hover {
-  text-decoration: underline;
+  color: var(--accent-dark);
 }
 
 /* ================================
    MARK / HIGHLIGHT
 ================================ */
 mark.has-accent-color {
-  color: #cd2653;
+  color: var(--accent);
   background: transparent;
+}
+
+/* ================================
+   BUTTONS (MATCH WORDPRESS LOOK)
+================================ */
+.wp-block-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.wp-block-button {
+  width: 100%;
+  max-width: 380px;
+}
+
+.wp-block-button__link {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  background: var(--accent);
+  color: var(--white);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.wp-block-button__link:hover {
+  background: var(--accent-dark);
 }
 
 /* ================================
    EMBEDS (YOUTUBE)
 ================================ */
 .wp-block-embed {
-  max-width: 800px;
-  margin: auto;
+  max-width: 720px;
+  margin: 30px auto;
 }
 
 .wp-block-embed iframe {
   width: 100%;
-  height: 450px;
-}
-
-/* ================================
-   COLUMNS
-================================ */
-.wp-block-columns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.wp-block-column {
-  flex: 1;
-  min-width: 280px;
-}
-
-/* ================================
-   QUERY / POSTS GRID
-================================ */
-.wp-block-post-template {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 30px;
-}
-
-.wp-block-post-featured-image img {
-  width: 100%;
+  height: 405px;
   border-radius: 6px;
 }
 
-.wp-block-post-title a {
-  color: #1e1e1e;
-  text-decoration: none;
-}
-
-.wp-block-post-title a:hover {
-  color: #cd2653;
-}
-
 /* ================================
-   SUBSCRIBE FORM
+   FORMS (SUBSCRIBE)
 ================================ */
 form input[type="email"] {
   width: 100%;
   max-width: 360px;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
+  padding: 12px;
+  border: 1px solid #bbb;
   border-radius: 4px;
+  font-size: 1rem;
 }
 
 form button {
-  padding: 10px 25px;
+  margin-top: 10px;
+  padding: 12px 26px;
   border: none;
-  background: #cd2653;
-  color: #fff;
-  font-weight: 600;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 1rem;
   border-radius: 4px;
   cursor: pointer;
 }
 
 form button:hover {
-  background: #a91f44;
+  background: var(--accent-dark);
 }
 
 /* ================================
-   RESPONSIVE
+   LINKS (GLOBAL)
+================================ */
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+/* ================================
+   MOBILE OPTIMIZATION
 ================================ */
 @media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
   h2 {
     font-size: 1.6rem;
   }
