@@ -4,13 +4,77 @@
   <meta charset="UTF-8">
   <title>B.Pharm</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="data/b-pharm/style.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #f6f0e4;   /* beige theme */
+      color: #000;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    /* Top semester links */
+    .quick-links {
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .quick-links a {
+      display: inline-block;
+      margin: 2px 4px;
+      color: #0000ee;
+      text-decoration: underline;
+    }
+
+    /* // separator */
+    .separator {
+      margin: 20px 0;
+      font-size: 18px;
+    }
+
+    h2 {
+      margin: 25px 0 12px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* Subject buttons */
+    .subjects {
+      max-width: 950px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .subjects a {
+      background: #c4002f;   /* RED */
+      color: #fff;
+      padding: 6px 10px;
+      font-size: 12px;
+      text-decoration: none;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+
+    .subjects a:hover {
+      opacity: 0.85;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1 class="title">B.Pharm</h1>
+<h1>B.Pharm</h1>
 
-<!-- Semester quick links -->
 <div class="quick-links">
   <a href="#i-semester">I - Semester</a>
   <a href="#ii-semester">II - Semester</a>
@@ -55,7 +119,30 @@
 
 <div class="separator">//</div>
 
-<!-- Repeat SAME pattern for III–VIII (content unchanged) -->
+<!-- III SEM -->
+<section id="iii-semester">
+  <h2>III - Semester</h2>
+  <div class="subjects">
+    <a>PHARMACEUTICAL ORGANIC CHEMISTRY II (BP301T)</a>
+    <a>PHYSICAL PHARMACEUTICS I (BP302T)</a>
+    <a>PHARMACEUTICAL MICROBIOLOGY (BP303T)</a>
+    <a>PHARMACEUTICAL ENGINEERING (BP304T)</a>
+  </div>
+</section>
+
+<div class="separator">//</div>
+
+<!-- IV SEM -->
+<section id="iv-semester">
+  <h2>IV - Semester</h2>
+  <div class="subjects">
+    <a>PHARMACEUTICAL ORGANIC CHEMISTRY III (BP401T)</a>
+    <a>MEDICINAL CHEMISTRY I (BP402T)</a>
+    <a>PHYSICAL PHARMACEUTICS II (BP403T)</a>
+    <a>PHARMACOLOGY I (BP404T)</a>
+    <a>PHARMACOGNOSY & PHYTOCHEMISTRY I (BP405T)</a>
+  </div>
+</section>
 
 </body>
 </html>
