@@ -11,11 +11,9 @@ body{
   padding:40px 20px;
   background:#f6f0e4;
   font-family:Arial, Helvetica, sans-serif;
-  color:#000;
   text-align:center;
 }
 
-/* Back link */
 .back{
   color:#0000ee;
   text-decoration:none;
@@ -24,70 +22,45 @@ body{
   margin-bottom:20px;
 }
 
-/* Headings */
 h1{
   color:#c4002f;
-  margin:10px 0 25px;
+  margin-bottom:30px;
 }
 
-/* Button containers */
-.section{
-  margin:25px 0;
-}
-
-/* Buttons */
-.action-btn,
-.unit-btn{
+.btn{
   width:320px;
   background:#ffffff;
   border:2px solid #c4002f;
   color:#c4002f;
-  padding:12px 18px;
-  font-size:14px;
+  padding:12px;
   font-weight:600;
-  text-decoration:none;
   border-radius:6px;
-  display:inline-block;
-  margin:8px auto;
-  transition:all 0.2s ease;
+  text-decoration:none;
+  display:block;
+  margin:10px auto;
+  transition:.2s;
 }
 
-.action-btn:hover,
-.unit-btn:hover{
+.btn:hover{
   background:#c4002f;
-  color:#ffffff;
-}
-
-/* Units stack */
-.units{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+  color:#fff;
 }
 </style>
 </head>
 
 <body>
 
-<a href="../../index.html" class="back">← Back to I Semester</a>
+<a href="../index.html" class="back">← Back to I Semester</a>
 
 <h1>Pharmaceutics I (BP103T)</h1>
 
-<!-- SYLLABUS -->
-<div class="section">
-  <a href="syllabus/" class="action-btn">
-    📘 View Syllabus (BP103T)
-  </a>
-</div>
+<a href="syllabus/" class="btn">📘 View Syllabus</a>
 
-<!-- UNITS -->
-<div class="section units">
-  <a href="unit-1/" class="unit-btn">Unit I – Introduction to Pharmaceutics</a>
-  <a href="unit-2/" class="unit-btn">Unit II – Dosage Forms & Additives</a>
-  <a href="unit-3/" class="unit-btn">Unit III – Pharmaceutical Calculations</a>
-  <a href="unit-4/" class="unit-btn">Unit IV – Dispensing Pharmacy</a>
-  <a href="unit-5/" class="unit-btn">Unit V – Formulation Principles</a>
-</div>
+<a href="unit-1/" class="btn">Unit I – Introduction to Pharmaceutics</a>
+<a href="unit-2/" class="btn">Unit II – Dosage Forms</a>
+<a href="unit-3/" class="btn">Unit III – Powders</a>
+<a href="unit-4/" class="btn">Unit IV – Solutions</a>
+<a href="unit-5/" class="btn">Unit V – Suspensions</a>
 
 </body>
 </html>
