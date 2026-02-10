@@ -13,17 +13,57 @@ body{
   font-family:Arial, Helvetica, sans-serif;
   text-align:center;
 }
+
+/* Back */
 .back{
   color:#0000ee;
   text-decoration:none;
   font-size:14px;
   display:inline-block;
-  margin-bottom:20px;
+  margin-bottom:15px;
 }
+
+/* Head */
 h1{
   color:#c4002f;
-  margin-bottom:30px;
+  margin-bottom:20px;
 }
+
+/* Top actions */
+.actions{
+  margin-bottom:25px;
+}
+.actions a{
+  display:inline-block;
+  margin:5px;
+  padding:10px 18px;
+  border:2px solid #c4002f;
+  color:#c4002f;
+  text-decoration:none;
+  font-weight:600;
+  border-radius:6px;
+  transition:0.2s;
+}
+.actions a:hover{
+  background:#c4002f;
+  color:#fff;
+}
+
+/* Search */
+.search-box{
+  margin:20px auto 30px;
+  max-width:380px;
+}
+.search-box input{
+  width:100%;
+  padding:12px;
+  font-size:14px;
+  border:2px solid #c4002f;
+  border-radius:6px;
+  outline:none;
+}
+
+/* Buttons */
 .btn{
   width:380px;
   background:#ffffff;
@@ -42,6 +82,18 @@ h1{
   color:#ffffff;
 }
 </style>
+
+<script>
+function searchUnits(){
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let buttons = document.getElementsByClassName("btn");
+
+  for(let i = 0; i < buttons.length; i++){
+    let text = buttons[i].innerText.toLowerCase();
+    buttons[i].style.display = text.includes(input) ? "block" : "none";
+  }
+}
+</script>
 </head>
 
 <body>
@@ -50,6 +102,22 @@ h1{
 
 <h1>Human Anatomy & Physiology – II (BP201T)</h1>
 
+<!-- ACTION BUTTONS -->
+<div class="actions">
+  <a href="syllabus/">📘 View Syllabus</a>
+</div>
+
+<!-- SEARCH -->
+<div class="search-box">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="🔍 Search units..."
+    onkeyup="searchUnits()"
+  >
+</div>
+
+<!-- UNITS -->
 <a href="unit-1/" class="btn">Unit I – Nervous System</a>
 <a href="unit-2/" class="btn">Unit II – Endocrine System</a>
 <a href="unit-3/" class="btn">Unit III – Cardiovascular System</a>
