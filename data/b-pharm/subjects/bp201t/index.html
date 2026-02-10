@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Human Anatomy & Physiology – II (BP201T)</title>
+<title>Human Anatomy and Physiology II (BP201T)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body{
   margin:0;
-  padding:30px 20px;
+  padding:40px;
   background:#f6f0e4;
   font-family:Arial, Helvetica, sans-serif;
-  text-align:center;
   color:#000;
+  text-align:center;              /* EVERYTHING CENTERED */
 }
 
 /* Back link */
@@ -21,69 +21,68 @@ body{
   text-decoration:none;
   font-size:14px;
   display:inline-block;
-  margin-bottom:15px;
+  margin-bottom:20px;
 }
 
-/* Headings */
+/* Main heading */
 h1{
   color:#c4002f;
-  margin:10px 0;
-  font-size:28px;
+  margin:20px 0;
 }
 
-h2{
-  font-size:18px;
-  margin:15px 0 25px;
-  font-weight:600;
+/* Section headings */
+h3{
+  margin-top:30px;
 }
 
-/* Width controller (same as BP101T) */
-.wrap{
-  max-width:480px;
-  margin:0 auto;
+/* Search box */
+.search{
+  width:320px;
+  padding:10px 14px;
+  font-size:14px;
+  border:2px solid #c4002f;
+  border-radius:4px;
+  outline:none;
+  margin:15px auto 5px;
 }
 
-/* Primary button style */
-.btn{
-  display:block;
-  width:100%;
+/* Unit buttons container */
+.unit-buttons{
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+}
+
+/* Unit button style (IDENTICAL TO BP101T) */
+.unit-btn{
+  width:320px;
   background:#ffffff;
   border:2px solid #c4002f;
   color:#c4002f;
-  padding:14px 16px;
-  font-weight:700;
-  border-radius:10px;
+  padding:10px 14px;
+  font-size:14px;
+  font-weight:600;
   text-decoration:none;
-  margin:14px 0;
-  text-align:center;
-  transition:0.2s ease;
+  border-radius:4px;
+  transition:all 0.2s ease;
 }
 
-.btn:hover{
+.unit-btn:hover{
   background:#c4002f;
   color:#ffffff;
-}
-
-/* Search */
-.search{
-  width:100%;
-  padding:14px;
-  font-size:15px;
-  border:2px solid #c4002f;
-  border-radius:10px;
-  outline:none;
-  margin:20px 0;
 }
 </style>
 
 <script>
 function searchUnits(){
   let input = document.getElementById("search").value.toLowerCase();
-  let buttons = document.getElementsByClassName("btn");
+  let units = document.getElementsByClassName("unit-btn");
 
-  for(let i=0;i<buttons.length;i++){
-    let txt = buttons[i].innerText.toLowerCase();
-    buttons[i].style.display = txt.includes(input) ? "block" : "none";
+  for(let i=0;i<units.length;i++){
+    let text = units[i].innerText.toLowerCase();
+    units[i].style.display = text.includes(input) ? "block" : "none";
   }
 }
 </script>
@@ -93,29 +92,32 @@ function searchUnits(){
 
 <a href="../../index.html" class="back">← Back to II Semester</a>
 
-<h1>Human Anatomy & Physiology – II<br>(BP201T)</h1>
+<h1>Human Anatomy and Physiology II (BP201T)</h1>
 
-<div class="wrap">
+<h3>II - Semester Syllabus</h3>
 
-  <!-- Syllabus -->
-  <a href="syllabus/" class="btn">📘 View Syllabus</a>
+<div class="unit-buttons">
+  <a href="syllabus/" class="unit-btn">
+    View Syllabus (BP201T)
+  </a>
+</div>
 
-  <!-- Search -->
-  <input
-    id="search"
-    class="search"
-    type="text"
-    placeholder="🔍 Search units..."
-    onkeyup="searchUnits()"
-  >
+<h3>Units</h3>
 
-  <!-- Units (same style as BP101T notes buttons) -->
-  <a href="unit-1/" class="btn">Unit I – Nervous System</a>
-  <a href="unit-2/" class="btn">Unit II – Endocrine System</a>
-  <a href="unit-3/" class="btn">Unit III – Cardiovascular System</a>
-  <a href="unit-4/" class="btn">Unit IV – Respiratory System</a>
-  <a href="unit-5/" class="btn">Unit V – Urinary & Reproductive System</a>
+<input
+  type="text"
+  id="search"
+  class="search"
+  placeholder="Search units..."
+  onkeyup="searchUnits()"
+/>
 
+<div class="unit-buttons">
+  <a href="unit-1/" class="unit-btn">Unit I – Nervous System</a>
+  <a href="unit-2/" class="unit-btn">Unit II – Endocrine System</a>
+  <a href="unit-3/" class="unit-btn">Unit III – Cardiovascular System</a>
+  <a href="unit-4/" class="unit-btn">Unit IV – Respiratory System</a>
+  <a href="unit-5/" class="unit-btn">Unit V – Urinary & Reproductive System</a>
 </div>
 
 </body>
