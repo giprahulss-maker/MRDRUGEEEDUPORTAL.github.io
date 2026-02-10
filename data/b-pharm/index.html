@@ -18,25 +18,35 @@ h2{margin:30px 0 15px;}
 .quick-links a{margin:0 6px;font-size:13px;color:#0000ee;}
 .sep{margin:25px 0;font-size:18px;}
 
+/* ===== SUBJECT LIST FIX ===== */
+
 .subjects{
-  max-width:1100px;
-  margin:0 auto;
   display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:10px;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+  margin:30px 0;
 }
+
 .subject-btn{
+  display:block;
+  width:90%;
+  max-width:560px;
   background:#c4002f;
-  color:#fff;
-  padding:10px 14px;
-  font-size:13px;
-  font-weight:600;
-  border-radius:4px;
-  cursor:pointer;
-  border:none;
+  color:#ffffff;
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+  padding:14px 18px;
+  text-align:center;
+  border-radius:8px;
+  line-height:1.4;
+  transition:all 0.2s ease;
 }
-.subject-btn:hover{background:#9b0024;}
+
+.subject-btn:hover{
+  background:#9e0025;
+}
 
 #page{
   display:none;
