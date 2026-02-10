@@ -8,7 +8,7 @@
 <style>
 body{
   margin:0;
-  padding:40px 20px;
+  padding:30px 20px;
   background:#f6f0e4;
   font-family:Arial, Helvetica, sans-serif;
   text-align:center;
@@ -21,55 +21,31 @@ body{
   text-decoration:none;
   font-size:14px;
   display:inline-block;
-  margin-bottom:20px;
+  margin-bottom:15px;
 }
 
-/* Heading */
+/* Headings */
 h1{
   color:#c4002f;
-  margin-bottom:25px;
+  margin:10px 0;
+  font-size:28px;
 }
 
-/* Width controller */
-.page-wrap{
-  max-width:420px;
+h2{
+  font-size:18px;
+  margin:15px 0 25px;
+  font-weight:600;
+}
+
+/* Width controller (same as BP101T) */
+.wrap{
+  max-width:480px;
   margin:0 auto;
 }
 
-/* Action buttons */
-.actions{
-  margin-bottom:20px;
-}
-.actions a{
-  display:inline-block;
-  padding:12px 20px;
-  border:2px solid #c4002f;
-  color:#c4002f;
-  text-decoration:none;
-  font-weight:700;
-  border-radius:10px;
-  transition:0.2s;
-}
-.actions a:hover{
-  background:#c4002f;
-  color:#ffffff;
-}
-
-/* Search */
-.search-box{
-  margin:20px 0;
-}
-.search-box input{
-  width:100%;
-  padding:14px;
-  font-size:15px;
-  border:2px solid #c4002f;
-  border-radius:10px;
-  outline:none;
-}
-
-/* Unit buttons */
+/* Primary button style */
 .btn{
+  display:block;
   width:100%;
   background:#ffffff;
   border:2px solid #c4002f;
@@ -78,26 +54,36 @@ h1{
   font-weight:700;
   border-radius:10px;
   text-decoration:none;
-  display:block;
-  margin:12px 0;
+  margin:14px 0;
   text-align:center;
-  transition:0.2s;
+  transition:0.2s ease;
 }
 
 .btn:hover{
   background:#c4002f;
   color:#ffffff;
 }
+
+/* Search */
+.search{
+  width:100%;
+  padding:14px;
+  font-size:15px;
+  border:2px solid #c4002f;
+  border-radius:10px;
+  outline:none;
+  margin:20px 0;
+}
 </style>
 
 <script>
 function searchUnits(){
-  let input = document.getElementById("searchInput").value.toLowerCase();
-  let units = document.getElementsByClassName("btn");
+  let input = document.getElementById("search").value.toLowerCase();
+  let buttons = document.getElementsByClassName("btn");
 
-  for(let i = 0; i < units.length; i++){
-    let text = units[i].innerText.toLowerCase();
-    units[i].style.display = text.includes(input) ? "block" : "none";
+  for(let i=0;i<buttons.length;i++){
+    let txt = buttons[i].innerText.toLowerCase();
+    buttons[i].style.display = txt.includes(input) ? "block" : "none";
   }
 }
 </script>
@@ -107,26 +93,23 @@ function searchUnits(){
 
 <a href="../../index.html" class="back">← Back to II Semester</a>
 
-<h1>Human Anatomy & Physiology – II (BP201T)</h1>
+<h1>Human Anatomy & Physiology – II<br>(BP201T)</h1>
 
-<div class="page-wrap">
+<div class="wrap">
 
   <!-- Syllabus -->
-  <div class="actions">
-    <a href="syllabus/">📘 View Syllabus</a>
-  </div>
+  <a href="syllabus/" class="btn">📘 View Syllabus</a>
 
   <!-- Search -->
-  <div class="search-box">
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="🔍 Search units..."
-      onkeyup="searchUnits()"
-    >
-  </div>
+  <input
+    id="search"
+    class="search"
+    type="text"
+    placeholder="🔍 Search units..."
+    onkeyup="searchUnits()"
+  >
 
-  <!-- Units -->
+  <!-- Units (same style as BP101T notes buttons) -->
   <a href="unit-1/" class="btn">Unit I – Nervous System</a>
   <a href="unit-2/" class="btn">Unit II – Endocrine System</a>
   <a href="unit-3/" class="btn">Unit III – Cardiovascular System</a>
