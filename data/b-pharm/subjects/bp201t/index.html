@@ -12,50 +12,53 @@ body{
   background:#f6f0e4;
   font-family:Arial, Helvetica, sans-serif;
   text-align:center;
+  color:#000;
 }
 
-/* Back */
+/* Back link */
 .back{
   color:#0000ee;
   text-decoration:none;
   font-size:14px;
   display:inline-block;
-  margin-bottom:15px;
-}
-
-/* Head */
-h1{
-  color:#c4002f;
   margin-bottom:20px;
 }
 
-/* Top actions */
-.actions{
+/* Heading */
+h1{
+  color:#c4002f;
   margin-bottom:25px;
+}
+
+/* Width controller */
+.page-wrap{
+  max-width:420px;
+  margin:0 auto;
+}
+
+/* Action buttons */
+.actions{
+  margin-bottom:20px;
 }
 .actions a{
   display:inline-block;
-  margin:5px;
-  padding:10px 18px;
+  padding:12px 20px;
   border:2px solid #c4002f;
   color:#c4002f;
   text-decoration:none;
-  font-weight:600;
-  border-radius:6px;
+  font-weight:700;
+  border-radius:10px;
   transition:0.2s;
 }
 .actions a:hover{
   background:#c4002f;
-  color:#fff;
-}
-
-/* Page width control */
-.page-wrap{
-  max-width:420px;     /* controls width on mobile */
-  margin:0 auto;
+  color:#ffffff;
 }
 
 /* Search */
+.search-box{
+  margin:20px 0;
+}
 .search-box input{
   width:100%;
   padding:14px;
@@ -85,17 +88,16 @@ h1{
   background:#c4002f;
   color:#ffffff;
 }
-  
 </style>
 
 <script>
 function searchUnits(){
   let input = document.getElementById("searchInput").value.toLowerCase();
-  let buttons = document.getElementsByClassName("btn");
+  let units = document.getElementsByClassName("btn");
 
-  for(let i = 0; i < buttons.length; i++){
-    let text = buttons[i].innerText.toLowerCase();
-    buttons[i].style.display = text.includes(input) ? "block" : "none";
+  for(let i = 0; i < units.length; i++){
+    let text = units[i].innerText.toLowerCase();
+    units[i].style.display = text.includes(input) ? "block" : "none";
   }
 }
 </script>
@@ -103,21 +105,28 @@ function searchUnits(){
 
 <body>
 
-<a href="../index.html" class="back">← Back to II Semester</a>
+<a href="../../index.html" class="back">← Back to II Semester</a>
+
+<h1>Human Anatomy & Physiology – II (BP201T)</h1>
+
 <div class="page-wrap">
 
+  <!-- Syllabus -->
   <div class="actions">
     <a href="syllabus/">📘 View Syllabus</a>
   </div>
 
+  <!-- Search -->
   <div class="search-box">
     <input
       type="text"
+      id="searchInput"
       placeholder="🔍 Search units..."
       onkeyup="searchUnits()"
     >
   </div>
 
+  <!-- Units -->
   <a href="unit-1/" class="btn">Unit I – Nervous System</a>
   <a href="unit-2/" class="btn">Unit II – Endocrine System</a>
   <a href="unit-3/" class="btn">Unit III – Cardiovascular System</a>
@@ -125,3 +134,6 @@ function searchUnits(){
   <a href="unit-5/" class="btn">Unit V – Urinary & Reproductive System</a>
 
 </div>
+
+</body>
+</html>
