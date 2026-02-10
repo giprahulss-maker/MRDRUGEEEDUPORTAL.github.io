@@ -49,38 +49,43 @@ h1{
   color:#fff;
 }
 
-/* Search */
-.search-box{
-  margin:20px auto 30px;
-  max-width:380px;
+/* Page width control */
+.page-wrap{
+  max-width:420px;     /* controls width on mobile */
+  margin:0 auto;
 }
+
+/* Search */
 .search-box input{
   width:100%;
-  padding:12px;
-  font-size:14px;
+  padding:14px;
+  font-size:15px;
   border:2px solid #c4002f;
-  border-radius:6px;
+  border-radius:10px;
   outline:none;
 }
 
-/* Buttons */
+/* Unit buttons */
 .btn{
-  width:380px;
+  width:100%;
   background:#ffffff;
   border:2px solid #c4002f;
   color:#c4002f;
-  padding:12px;
-  font-weight:600;
-  border-radius:6px;
+  padding:14px 16px;
+  font-weight:700;
+  border-radius:10px;
   text-decoration:none;
   display:block;
-  margin:10px auto;
+  margin:12px 0;
+  text-align:center;
   transition:0.2s;
 }
+
 .btn:hover{
   background:#c4002f;
   color:#ffffff;
 }
+  
 </style>
 
 <script>
@@ -99,30 +104,24 @@ function searchUnits(){
 <body>
 
 <a href="../index.html" class="back">← Back to II Semester</a>
+<div class="page-wrap">
 
-<h1>Human Anatomy & Physiology – II (BP201T)</h1>
+  <div class="actions">
+    <a href="syllabus/">📘 View Syllabus</a>
+  </div>
 
-<!-- ACTION BUTTONS -->
-<div class="actions">
-  <a href="syllabus/">📘 View Syllabus</a>
+  <div class="search-box">
+    <input
+      type="text"
+      placeholder="🔍 Search units..."
+      onkeyup="searchUnits()"
+    >
+  </div>
+
+  <a href="unit-1/" class="btn">Unit I – Nervous System</a>
+  <a href="unit-2/" class="btn">Unit II – Endocrine System</a>
+  <a href="unit-3/" class="btn">Unit III – Cardiovascular System</a>
+  <a href="unit-4/" class="btn">Unit IV – Respiratory System</a>
+  <a href="unit-5/" class="btn">Unit V – Urinary & Reproductive System</a>
+
 </div>
-
-<!-- SEARCH -->
-<div class="search-box">
-  <input
-    type="text"
-    id="searchInput"
-    placeholder="🔍 Search units..."
-    onkeyup="searchUnits()"
-  >
-</div>
-
-<!-- UNITS -->
-<a href="unit-1/" class="btn">Unit I – Nervous System</a>
-<a href="unit-2/" class="btn">Unit II – Endocrine System</a>
-<a href="unit-3/" class="btn">Unit III – Cardiovascular System</a>
-<a href="unit-4/" class="btn">Unit IV – Respiratory System</a>
-<a href="unit-5/" class="btn">Unit V – Urinary & Reproductive System</a>
-
-</body>
-</html>
